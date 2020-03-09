@@ -6,5 +6,5 @@
 console-msg: "§7[§c!§7] §cThis command can't be used here. Sorry!"
 
 #Message When Player Quit The Menu
-quit-msg: "§7[§c!§7] §eClosed Mask Menu..."
+quit-msg: "§7[§cMaske!§7] §eClosed Mask Menu..."
 ...
