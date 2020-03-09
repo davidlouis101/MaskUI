@@ -32,7 +32,7 @@ class Main extends PluginBase implements Listener {
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args):bool
     {
         switch($cmd->getName()){
-        case "mask":
+        case "maske":
         if(!($sender instanceof Player)){
                 $sender->sendMessage($this->getConfig()->get("console-msg"));
                 return true;
@@ -47,44 +47,44 @@ class Main extends PluginBase implements Listener {
                     $sender->sendMessage($this->getConfig()->get("quit-msg"));
                         break;
                     case 1:
-                    $sender->sendMessage("§eMaskUI§7>> §aYour Mask Has Been Changed To §fSkeleton!");
+                    $sender->sendMessage("§eMaskUI§7>> §aDeine Maske Wurde Geandert auf §fSkeleton!");
                     $sender->getInventory()->clearAll();
 					$sender->getArmorInventory()->clearAll();
 	                $sender->getArmorInventory()->setHelmet(Item::get(397, 0, 1));
-	                $sender->addTitle("§6You Received", "§fSkeleton §eMask");
+	                $sender->addTitle("§6Du Bekommst", "§fSkeleton §eMaske");
 						break;
 					case 2:
-					$sender->sendMessage("§eMaskUI§7>> §aYour Mask Has Been Changed To §0Wither Skeleton!");
+					$sender->sendMessage("§eMaskUI§7>> §aDeine Maske Wurde Geandert auf §0Wither Skeleton!");
                     $sender->getInventory()->clearAll();
 					$sender->getArmorInventory()->clearAll();
 	                $sender->getArmorInventory()->setHelmet(Item::get(397, 1, 1));
-	                $sender->addTitle("§6You Received", "§0Wither Skeleton §eMask");
+	                $sender->addTitle("§6Du Bekommst", "§0Wither Skeleton §eMask");
 						break;
 					case 3:
-					$sender->sendMessage("§eMaskUI§7>> §aYour Mask Has Been Changed To §2Zombie!");
+					$sender->sendMessage("§eMaskUI§7>> §aDeine Maske Wurde Geandert auf §2Zombie!");
                     $sender->getInventory()->clearAll();
 					$sender->getArmorInventory()->clearAll();
 	                $sender->getArmorInventory()->setHelmet(Item::get(397, 2, 1));
-	                $sender->addTitle("§6You Received", "§2Zombie §eMask");
+	                $sender->addTitle("§6Du Bekommst", "§2Zombie §eMaske");
 					    break;
 					case 4:
-					$sender->sendMessage("§eMaskUI§7>> §aYour Mask Has Been Changed To Creeper!");
+					$sender->sendMessage("§eMaskUI§7>> §aDeine Maske Wurde Geandert auf Creeper!");
                     $sender->getInventory()->clearAll();
 					$sender->getArmorInventory()->clearAll();
 	                $sender->getArmorInventory()->setHelmet(Item::get(397, 4, 1));
-	                $sender->addTitle("§6You Received", "§aCreeper §eMask");
+	                $sender->addTitle("§6Du Bekommst", "§aCreeper §eMaske");
 					    break;
 					case 5:
-					$sender->sendMessage("§eMaskUI§7>> §6Your Mask Has Been Changed To §4Dragon!");
+					$sender->sendMessage("§eMaskUI§7>> §6Deine Maske Wurde Geandert auf §4Drache!");
                     $sender->getInventory()->clearAll();
 					$sender->getArmorInventory()->clearAll();
 	                $sender->getArmorInventory()->setHelmet(Item::get(397, 5, 1));
-	                $sender->addTitle("§6You Received", "§4Dragon §eMask");
+	                $sender->addTitle("§6Du Bekommst", "§4Dragon §eMask");
 					    break;
             }
         });
         $form->setTitle("§l§eMask §fMenu");
-        $form->setContent("§7Please Select Your Favorite §eMask \n§7Note: Clear your inventory before choosing a §eMask \n§7Plugin By: §dMisael38");
+        $form->setContent("§7Bitte Wahle Eine Maske");
         $form->addButton("§l§bExit", 0);
         $form->addButton("§l§fSkeleton", 1);
         $form->addButton("§l§0Wither Skeleton", 2);
